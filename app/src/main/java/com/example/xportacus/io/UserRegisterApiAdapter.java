@@ -12,7 +12,7 @@ public class UserRegisterApiAdapter {
     /**
      * Localhost IP for AVD emulators: 10.0.2.2
      */
-    private static final String BASE_URL = "http://10.0.2.2:8080/api/";
+    private static final String BASE_URL = "http://localhost/api/";
 
     public static UserRegister getApiService() {
         // Creamos un interceptor y le indicamos el log level a usar
@@ -35,5 +35,6 @@ public class UserRegisterApiAdapter {
 
         return API_SERVICE;
     }
+
 
 }
