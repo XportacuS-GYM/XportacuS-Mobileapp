@@ -8,11 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.xportacus.io.User;
 import com.example.xportacus.io.UserRegister;
 import com.example.xportacus.io.UserRegisterApiAdapter;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -46,7 +50,22 @@ public class RegisterActivity extends AppCompatActivity {
                 int age = Integer.parseInt(txtAge.getText().toString().trim());
 
                 UserRegister apiService = UserRegisterApiAdapter.getApiService();
+                Call<User> call = apiService.User(name, "Perez", age, email, password, password_confirmation, address, 1);
 
+                call.enqueue(new Callback<User>() {
+                    @Override
+                    public void onResponse(Call<User> call, Response<User> response) {
+                        if (response.isSuccessful() && response.body() != null){
+                            String tokenInter = response.body().getName();
+                            System.out.println(tokenInter);
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<User> call, Throwable t) {
+                        System.out.println("error:"+t);
+                    }
+                });
 
 
             }
