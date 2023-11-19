@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go_to_register(View view)
     {
-        Intent register=new Intent(MainActivity.this,RegisterActivity.class);
+        Intent register=new Intent(MainActivity.this,qrActivity.class);
         startActivity(register);
     }
 
