@@ -18,7 +18,7 @@
         android:hardwareAccelerated="true"
         >
         <activity
-            android:name=".qrAcivity"
+            android:name=".qrActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             />
