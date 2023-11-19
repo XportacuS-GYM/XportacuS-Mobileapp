@@ -57,13 +57,13 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onResponse(Call<User> call, Response<User> response) {
                         if (response.isSuccessful() && response.body() != null){
                             String tokenInter = response.body().getName();
-                            System.out.println(tokenInter);
+                            System.out.println("Token: "+tokenInter);
                         }
                     }
 
                     @Override
                     public void onFailure(Call<User> call, Throwable t) {
-                        System.out.println("error:"+t);
+                        System.out.println("error asdsadasd:"+t.getCause());
                     }
                 });
 

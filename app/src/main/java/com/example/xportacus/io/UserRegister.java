@@ -10,7 +10,7 @@ public interface UserRegister
 {
 
     @FormUrlEncoded
-    @PUT("/api/registro")
+    @POST("/api/registro")
     Call<User> User(
             @Field("name") String name,
             @Field("lastname") String lastname,
