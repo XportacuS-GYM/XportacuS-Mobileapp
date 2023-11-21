@@ -24,6 +24,12 @@ public class qrActivity extends AppCompatActivity {
         EditText txtDatos=findViewById(R.id.idEdt);
         Button btnGuardar= findViewById(R.id.idBtnGenerateQR);
         ImageView qrImage=findViewById(R.id.idIVQrcode);
+
+        Bundle intent = getIntent().getExtras();
+        String email = intent.getString("email");
+
+        txtDatos.setText(email);
+
         btnGuardar.setOnClickListener(new View.OnClickListener()
           {
               @Override

@@ -21,6 +21,8 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
+    public String email;
+
     private EditText txtEmail, txtPassword;
     private Button LogIn;
     @Override
@@ -45,9 +47,13 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
                         if (response.isSuccessful() && response.body() != null){
-                            String Email = response.body().getEmail();
-                            System.out.println(response.body());
-                            //Toast.makeText(getApplicationContext(),"hola: "+response.body(), Toast.LENGTH_SHORT).show();
+                            String token = response.body().getToken();
+                            User user = response.body();
+                            String email = user.getEmail();
+
+                            Intent intent = new Intent(MainActivity.this, qrActivity.class);
+                            intent.putExtra("email", email);
+                            startActivity(intent);
                         }
                     }
 

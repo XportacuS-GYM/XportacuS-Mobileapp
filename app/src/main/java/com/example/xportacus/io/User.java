@@ -2,7 +2,7 @@ package com.example.xportacus.io;
 
 public class User {
 
-    private String name, lastname, address, email, password;
+    private String name, lastname, address, email, password, token;
     private int age, trainingLevel;
 
     public User(String name, String lastname, String address, String email, String password, int age, int trainingLevel){
@@ -13,6 +13,11 @@ public class User {
         this.password = password;
         this.age = age;
         this.trainingLevel = trainingLevel;
+    }
+
+    public User(String email, String password){
+        this.email = email;
+        this.password = password;
     }
 
     public String getName(){
@@ -50,6 +55,10 @@ public class User {
     public String setLastname(String lastname){
        return this.lastname = lastname;
     }
+
+    public String getToken(){ return this.token; }
+
+    public void setToken(String token) { this.token = token; }
 
 
 
