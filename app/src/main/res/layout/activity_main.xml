@@ -48,7 +48,7 @@
 
             <ImageView
                 android:id="@+id/login_bg"
-                android:layout_width="400dp"
+                android:layout_width="match_parent"
                 android:layout_height="493dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/login_background"
@@ -117,8 +117,6 @@
                 android:text="Iniciar Sesión"
 
                 android:onClick="go_to_video"
-                android:textColor="@color/black"
-
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="19sp"

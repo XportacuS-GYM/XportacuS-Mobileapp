@@ -1,111 +1,476 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    android:padding="22dp"
     android:background="@color/main">
 
+
     <ScrollView
-        android:id="@+id/scrollView3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <RelativeLayout
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:padding="22dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/notifyBtn_id"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignTop="@+id/textView2"
-                android:layout_alignBottom="@+id/textView2"
-                android:layout_marginStart="90dp"
-                android:layout_toEndOf="@+id/textView2"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="226dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="XportacuS - GYM"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/search_id"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_below="@+id/txtTitulo"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/search_rounded"
+                android:drawableLeft="@drawable/ic_search"
+                android:elevation="5dp"
+                android:fontFamily="sans-serif"
+                android:hint="  Buscar"
+                android:outlineSpotShadowColor="@color/deg"
                 android:padding="10dp"
-                android:src="@drawable/ic_notify"
-                android:tint="@color/white"
-                app:layout_constraintBottom_toBottomOf="@+id/textView2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView2"
-                tools:ignore="UseAppTint" />
+                android:textColorHint="@color/white"
+                android:textSize="15sp"
+                app:circularflow_defaultRadius="10dp"
+                app:cornerRadius="48dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+            <LinearLayout
+                android:id="@+id/nt"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/search_id">
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="226dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="XportacuS - GYM"
-                    android:textColor="@color/white"
-                    android:textSize="25dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            
-                        <EditText
-                            android:id="@+id/search_id"
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:layout_below="@+id/textView2"
-                            android:layout_marginTop="10dp"
-                            android:background="@drawable/search_rounded"
-                            android:drawableLeft="@drawable/ic_search"
-                            android:elevation="5dp"
-                            android:fontFamily="sans-serif"
-                            android:hint="  Buscar"
-                            android:outlineSpotShadowColor="@color/deg"
-                            android:padding="10dp"
-                            android:textColorHint="@color/white"
-                            android:textSize="15sp"
-                            app:circularflow_defaultRadius="10dp"
-                            app:cornerRadius="48dp"
-                            app:layout_constraintTop_toBottomOf="@+id/textView2" />
-            
-                        <TextView
-                            android:id="@+id/categorias"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/search_id"
-                            android:layout_marginTop="10dp"
-                            android:fontFamily="@font/montserrat_semibold"
-                            android:gravity="center"
-                            android:text="Categorías de Ejercicios"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/search_id" />
-            
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@+id/categorias"
-                    android:layout_marginTop="10dp"
-                    android:orientation="vertical">
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:outlineSpotShadowColor="@color/deg"
+                    app:cardBackgroundColor="@color/secon"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp">
 
-                    <com.google.android.material.tabs.TabLayout
-                        android:id="@+id/tabLayout"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:background="@drawable/tab_react"
-                        android:elevation="3dp"
-                        app:tabGravity="fill"
-                        app:tabIndicatorHeight="0dp"
-                        app:tabMode="fixed"
-                        app:tabRippleColor="@null"
-                        app:tabSelectedTextColor="@color/secon"
-                        app:tabTextAppearance="@style/TabLayout"
-                        app:tabTextColor="@color/black" />
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_gym"
+                            android:padding="10dp" />
 
-                    <androidx.viewpager2.widget.ViewPager2
+                        <TextView
+                            android:id="@+id/idTiempoUso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:letterSpacing="0.1"
+                            android:text="137 Min"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:letterSpacing="0.1"
+                            android:gravity="center"
+                            android:text="Tiempo de entrenamiento"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:outlineSpotShadowColor="@color/deg"
+                    app:cardBackgroundColor="@color/secon"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="600dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/secon">
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    </androidx.viewpager2.widget.ViewPager2>
-                </LinearLayout>
-        </RelativeLayout>
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_heart"
+                            android:padding="10dp"
+                            />
+                        <TextView
+                            android:id="@+id/idBeats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:letterSpacing="0.1"
+                            android:text="54 Beats"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:letterSpacing="0.1"
+                            android:gravity="center"
+                            android:text="Frecuencia cardiaca"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtSeccionEje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Sección de Ejercicios"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nt" />
+
+            <TextView
+                android:id="@+id/txtVer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver mas"
+                android:textColor="@color/secon"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtSeccionEje"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtSeccionEje" />
+
+            <LinearLayout
+                android:id="@+id/rutinas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/txtSeccionEje">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/gym1"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:outlineSpotShadowColor="@color/secon"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSeccionEje"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:elevation="10dp"
+                        android:src="@drawable/gym_r1"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="105dp"
+                        android:layout_marginRight="50dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:gravity="center|left"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Press Banca Inclinado"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:text="Músculos implicados: Pectoral superior (pecho), tríceps, deltoides anterior."
+                            android:textColor="@color/text"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/fav1_id"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="10dp"
+                        android:elevation="5dp"
+                        android:outlineSpotShadowColor="@color/red"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_fav"
+                        app:tint="@color/red" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:outlineSpotShadowColor="@color/secon"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSeccionEje"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:elevation="10dp"
+                        android:src="@drawable/gym_r2"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="105dp"
+                        android:layout_marginRight="50dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:gravity="center|left"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Press Militar"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:text="Músculos implicados: Deltoides, tríceps branquial"
+                            android:textColor="@color/text"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="10dp"
+                        android:elevation="5dp"
+                        android:outlineSpotShadowColor="@color/red"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_fav"
+                        app:tint="@color/red" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:outlineSpotShadowColor="@color/secon"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSeccionEje"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:elevation="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/gym_r3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="105dp"
+                        android:layout_marginRight="50dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:gravity="center|left"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pec Fly"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:text="Músculos implicados: Pectoral superior, Pectoral inferior, Caja torácica."
+                            android:textColor="@color/text"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="10dp"
+                        android:elevation="5dp"
+                        android:outlineSpotShadowColor="@color/red"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_fav"
+                        app:tint="@color/red" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:outlineSpotShadowColor="@color/secon"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSeccionEje"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:elevation="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/gym_r4" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="105dp"
+                        android:layout_marginRight="50dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:gravity="center|left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hip Thrust "
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:text="Músculos implicados: Glúteo mayor, Isquiosurales y aductor mayor, Cuádriceps, Grupo espinal."
+                            android:textColor="@color/text"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="10dp"
+                        android:elevation="5dp"
+                        android:outlineSpotShadowColor="@color/red"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_fav"
+                        app:tint="@color/red" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:outlineSpotShadowColor="@color/secon"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSeccionEje"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:elevation="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/gym_r5" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="105dp"
+                        android:layout_marginRight="50dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:gravity="center|left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jalon al pecho agarre estrecho"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:text="Músculos implicados: hombros, trapecios, tríceps, bíceps y antebrazos"
+                            android:textColor="@color/text"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="10dp"
+                        android:elevation="5dp"
+                        android:outlineSpotShadowColor="@color/red"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_fav"
+                        app:tint="@color/red" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bottom_background"
+        android:elevation="2dp"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_menu" />
+</RelativeLayout>

@@ -9,6 +9,8 @@
     <color name="deg">#282c5c</color>
 
     <color name="btn">#FFE000</color>
-
+    <color name="red">#FF0000</color>
+    <color name="bottom">#2C2C2E</color>
+    <color name="grey">#505050</color>
 
 </resources>
