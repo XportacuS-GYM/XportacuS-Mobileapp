@@ -11,7 +11,7 @@
         android:icon="@drawable/baseline_qr_code_scanner_24"
         android:title="Lector QR"/>
     <item
-        android:id="@+id/bottom_qrSuscriptor"
+        android:id="@+id/bottom_miqr"
         android:icon="@drawable/baseline_qr_code_24"
         android:title="QR"/>
     <item
