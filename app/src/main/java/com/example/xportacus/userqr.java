@@ -24,6 +24,8 @@ public class userqr extends AppCompatActivity {
         TextView txtDatos=findViewById(R.id.idEdt);
         Button btnGuardar= findViewById(R.id.idBtnGenerateQR);
         ImageView qrImage=findViewById(R.id.idIVQrcode);
+
+        txtDatos.setVisibility(View.INVISIBLE);
         btnGuardar.setOnClickListener(new View.OnClickListener()
                                       {
                                           @Override
