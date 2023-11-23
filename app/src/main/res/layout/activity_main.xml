@@ -118,9 +118,7 @@
 
                 android:onClick="go_to_video"
                 android:textColor="@color/black"
-
                 android:textAllCaps="false"
-                android:textColor="@color/black"
                 android:textSize="19sp"
                 android:textStyle="bold" />
 
