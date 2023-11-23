@@ -72,4 +72,11 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+    public void go_to_login(View view)
+    {
+        Intent GoBack=new Intent(RegisterActivity.this,MainActivity.class);
+        startActivity(GoBack);
+        finish();
+    }
+
 }
