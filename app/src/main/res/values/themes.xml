@@ -12,8 +12,9 @@
 
     <style name="Theme.Design.NoActionBar" parent="android:Theme.Material.Light.NoActionBar" />
 
-    <style name="TabLayout" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
-        <item name="android:textSize">12sp</item>
-        <item name="textAllCaps">false</item>
+
+    <style name="slideActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
     </style>
 </resources>
