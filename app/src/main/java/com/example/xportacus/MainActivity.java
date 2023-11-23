@@ -74,4 +74,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(register);
     }
 
+
+    public void go_to_video(View view)
+    {
+        Intent video=new Intent(MainActivity.this,VideoActivity.class);
+        startActivity(video);
+    }
 }

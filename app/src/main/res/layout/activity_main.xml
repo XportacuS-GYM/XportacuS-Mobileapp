@@ -115,6 +115,10 @@
                 android:background="@drawable/button_rounded"
                 android:fontFamily="@font/open_sans"
                 android:text="Iniciar Sesión"
+
+                android:onClick="go_to_video"
+                android:textColor="@color/black"
+
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="19sp"
