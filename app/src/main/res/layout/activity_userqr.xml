@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main">
@@ -53,13 +54,39 @@
         app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/idIVQrcode"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/qr"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtMiembro"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.207" />
+
+    <Button
+        android:id="@+id/idBtnGenerateQR"
+        android:layout_width="254dp"
+        android:layout_height="82dp"
+        android:text="Generar QR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.979" />
+
+    <TextView
+        android:id="@+id/idEdt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.859"
+        tools:ignore="MissingConstraints"
+        tools:visibility="invisible" />
 </androidx.constraintlayout.widget.ConstraintLayout>

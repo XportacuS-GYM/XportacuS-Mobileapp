@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                             User user = response.body();
                             String email = user.getEmail();
 
-                            Intent intent = new Intent(MainActivity.this, qrActivity.class);
+                            Intent intent = new Intent(MainActivity.this, userqr.class);
                             intent.putExtra("email", email);
                             startActivity(intent);
                         }
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go_to_register(View view)
     {
-        Intent register=new Intent(MainActivity.this,qrActivity.class);
+        Intent register=new Intent(MainActivity.this,lectorqr.class);
         startActivity(register);
     }
 
