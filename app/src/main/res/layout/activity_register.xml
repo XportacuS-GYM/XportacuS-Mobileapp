@@ -92,7 +92,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/name"
+                android:id="@+id/txtName"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
@@ -105,7 +105,7 @@
                 android:textColorHint="@color/white" />
 
             <EditText
-                android:id="@+id/edad"
+                android:id="@+id/txtEdad"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
@@ -118,7 +118,7 @@
                 android:textColorHint="@color/white" />
 
             <EditText
-                android:id="@+id/direccion"
+                android:id="@+id/txtDireccion"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
@@ -131,7 +131,7 @@
                 android:textColorHint="@color/white" />
 
             <EditText
-                android:id="@+id/sign_email"
+                android:id="@+id/txtSign_email"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
@@ -144,7 +144,7 @@
                 android:textColorHint="@color/white" />
 
             <EditText
-                android:id="@+id/sign_password"
+                android:id="@+id/txtSign_password"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
@@ -157,7 +157,7 @@
                 android:textColorHint="@color/white" />
 
             <EditText
-                android:id="@+id/sign_password_again"
+                android:id="@+id/txtSign_password_again"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
