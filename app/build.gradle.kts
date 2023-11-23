@@ -73,4 +73,6 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:2.6.4")
     implementation ("com.squareup.okhttp3:logging-interceptor:4.9.3")
     implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
+    implementation ("com.journeyapps:zxing-android-embedded:3.2.0")
+    implementation ("com.google.zxing:core:3.3.0")
 }

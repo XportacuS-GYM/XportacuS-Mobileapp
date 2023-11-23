@@ -21,7 +21,16 @@ public class userqr extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userqr);
 
+
+
         TextView txtDatos=findViewById(R.id.idEdt);
+
+        Bundle intent=getIntent().getExtras();
+
+        String emailqr= intent.getString("email");
+
+        txtDatos.setText(emailqr);
+
         Button btnGuardar= findViewById(R.id.idBtnGenerateQR);
         ImageView qrImage=findViewById(R.id.idIVQrcode);
 
