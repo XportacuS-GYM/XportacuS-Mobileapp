@@ -18,7 +18,7 @@ public class lectorqr extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lectorqr);
 
-        txtdatos=findViewById(R.id.txtDatosqr);
+        txtdatos=findViewById(R.id.txtEmail);
         new IntentIntegrator(this).initiateScan();
     }
 
