@@ -2,6 +2,7 @@ package com.example.xportacus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -28,7 +29,7 @@ public class userqr extends AppCompatActivity {
 
         Bundle intent=getIntent().getExtras();
 
-        String emailqr= intent.getString("email");
+        String emailqr="email@email.com";  //intent.getString("email");
 
         txtDatos.setText(emailqr);
 
@@ -51,6 +52,8 @@ public class userqr extends AppCompatActivity {
         }
         );
 
+
+
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
         bottomNavigation.setSelectedItemId(R.id.bottom_miqr);
 
@@ -67,6 +70,9 @@ public class userqr extends AppCompatActivity {
                 finish();
                 return true;
             } else if (itemId == R.id.bottom_miqr) {
+                startActivity(new Intent(getApplicationContext(), userqr.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
                 return true;
             } else if (itemId == R.id.bottom_profile) {
                 startActivity(new Intent(getApplicationContext(), VideoActivity.class));

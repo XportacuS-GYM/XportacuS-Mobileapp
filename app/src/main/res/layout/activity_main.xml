@@ -49,8 +49,8 @@
 
             <ImageView
                 android:id="@+id/login_bg"
-                android:layout_width="match_parent"
-                android:layout_height="493dp"
+                android:layout_width="384dp"
+                android:layout_height="353dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/login_background"
                 app:layout_constraintEnd_toEndOf="parent"
