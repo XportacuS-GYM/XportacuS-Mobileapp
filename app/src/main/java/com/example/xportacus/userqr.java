@@ -29,7 +29,7 @@ public class userqr extends AppCompatActivity {
 
         Bundle intent=getIntent().getExtras();
 
-        String emailqr="email@email.com";  //intent.getString("email");
+        String emailqr=intent.getString("email");
 
         txtDatos.setText(emailqr);
 
