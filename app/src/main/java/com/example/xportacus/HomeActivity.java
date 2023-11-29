@@ -17,6 +17,10 @@ public class HomeActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
         bottomNavigation.setSelectedItemId(R.id.bottom_home);
 
+        Bundle datos=getIntent().getExtras();
+
+        String emailqr=datos.getString("email");
+
         bottomNavigation.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.bottom_home) {
@@ -27,7 +31,9 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
                 return true;
             } else if (itemId == R.id.bottom_miqr) {
-                startActivity(new Intent(getApplicationContext(), userqr.class));
+                Intent intent = new Intent(getApplicationContext(), userqr.class);
+                intent.putExtra("email", emailqr);
+                startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
                 return true;

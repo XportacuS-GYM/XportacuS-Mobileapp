@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                             String token = response.body().getToken();
                             User user = response.body();
                             String email = user.getEmail();
+                            String nombre = user.getName();
+                            String statusSubscription = user.getStatusSubscription();
 
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                             intent.putExtra("email", email);
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go_to_register(View view)
     {
-        Intent register=new Intent(MainActivity.this, HomeActivity.class);
+        Intent register=new Intent(MainActivity.this, RegisterActivity.class);
         startActivity(register);
         finish();
     }
