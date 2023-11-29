@@ -1,51 +1,76 @@
 package com.example.xportacus;
 
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 public class VideoActivity extends AppCompatActivity {
     private VideoView vv1;
+    private ImageButton btnVideo;
+    private TextView durVideo;
+    private Handler handler;
+    private Runnable updateDurationRunnable;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
-        vv1.findViewById(R.id.vv1);
+        vv1=findViewById(R.id.vv1);
+        btnVideo = findViewById(R.id.btnVideo);
+        durVideo = findViewById(R.id.durVideo);
 
-        vv1.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.video1));
-
+        handler = new Handler();
+        vv1.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.curl_biceps_barra_z));
         vv1.start();
 
-
-        BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
-        bottomNavigation.setSelectedItemId(R.id.bottom_miqr);
-
-        bottomNavigation.setOnItemSelectedListener(item -> {
-            int itemId = item.getItemId();
-            if (itemId == R.id.bottom_home) {
-                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                finish();
-                return true;
-            } else if (itemId == R.id.bottom_lectorqr) {
-                startActivity(new Intent(getApplicationContext(), lectorqr.class));
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                finish();
-                return true;
-            } else if (itemId == R.id.bottom_miqr) {
-                startActivity(new Intent(getApplicationContext(), userqr.class));
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                finish();
-                return true;
-            } else if (itemId == R.id.bottom_profile) {
-                return true;
+        // Inicializar el Runnable para actualizar la duración
+        updateDurationRunnable = new Runnable() {
+            @Override
+            public void run() {
+                updateDuration();
+                handler.postDelayed(this, 1000);
             }
-            return false;
+        };
+        handler.post(updateDurationRunnable);
+        
+        //boton para pausar y poner play al video
+        btnVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (vv1.isPlaying()) {
+                    vv1.pause();
+                    btnVideo.setImageResource(android.R.drawable.ic_media_play);
+                } else {
+                    vv1.start();
+                    btnVideo.setImageResource(android.R.drawable.ic_media_pause);
+                }
+            }
         });
+    }
+
+    private void updateDuration() {
+        int currentPosition = vv1.getCurrentPosition();
+
+        // Actualizar el TextView con la duración actual
+        durVideo.setText(formatTime(currentPosition));
+    }
+    private String formatTime(int millis) {
+        int seconds = millis / 1000;
+        int minutes = seconds / 60;
+        seconds = seconds % 60;
+        return String.format("%02d:%02d", minutes, seconds);
+    }
+    public void go_to_home(View view)
+    {
+        Intent home=new Intent(VideoActivity.this,HomeActivity.class);
+        startActivity(home);
+        finish();
     }
 }
