@@ -1,4 +1,45 @@
 <resources>
     <string name="app_name">XportacuS</string>
     <string name="title_activity_register">RegisterActivity</string>
+
+    <string name="titulo_nombre">Titulo de Video</string>
+    <string name="titulo_desc">Músculos implicados:</string>
+    
+    <string-array name="titulos_de_video">
+        <item>Aperturas invertidas (Reverse fly)</item>
+        <item>Curl antebrazo agarre prono</item>
+        <item>Curl antebrazo agarre supino</item>
+        <item>Curl Biceps Barra Z</item>
+        <item>Elevaciones laterales en polea</item>
+        <item>Extensión de tríceps unilateral</item>
+        <item>Hip trust</item>
+        <item>Jalon al pecho agarre estrecho</item>
+        <item>Martillos Unilateral</item>
+        <item>Pec fly</item>
+        <item>Peso Muerto</item>
+        <item>Press banca inclinado</item>
+        <item>Press banca recto</item>
+        <item>Press Frances (Skull crushers) barra z</item>
+        <item>Press Militar</item>
+        <item>Remo sentado agarre cerrado</item>
+    </string-array>
+    
+    <string-array name="descrip_rutinas">
+        <item>Músculos implicados:</item>
+        <item>Músculos implicados:</item>
+        <item>Músculos implicados:</item>
+        <item>Músculos implicados:</item>
+        <item>Músculos implicados:</item>
+        <item>Músculos implicados:</item>
+        <item>Glúteo mayor, Isquiosurales y aductor mayor, Cuádriceps, Grupo espinal.</item> //hip trust
+        <item>hombros, trapecios, tríceps, bíceps y antebrazos.</item> //jalon
+        <item>Músculos implicados:</item>
+        <item>Pectoral superior, Pectoral inferior, Caja torácica.</item> //pec fly
+        <item>Músculos implicados:</item>
+        <item>Pectoral superior (pecho), tríceps, deltoides anterior.</item> //press banca inc
+        <item>Músculos implicados:</item>
+        <item>Músculos implicados:</item>
+        <item>Deltoides, tríceps branquial.</item> //press militar
+        <item>Músculos implicados:</item>
+    </string-array>
 </resources>
