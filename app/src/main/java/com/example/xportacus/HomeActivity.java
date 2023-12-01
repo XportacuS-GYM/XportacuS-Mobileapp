@@ -17,15 +17,19 @@ public class HomeActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
         bottomNavigation.setSelectedItemId(R.id.bottom_home);
 
-        //Bundle datos=getIntent().getExtras();
+        Bundle datos = getIntent().getExtras();
         String emailqr = "email@email.com"; //datos.getString("email");
+        String token = datos.getString("token");
 
         bottomNavigation.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.bottom_home) {
                 return true;
             } else if (itemId == R.id.bottom_lectorqr) {
-                startActivity(new Intent(getApplicationContext(), lectorqr.class));
+                Intent intent = new Intent(getApplicationContext(), lectorqr.class);
+                intent.putExtra("token", token);
+                startActivity(intent);
+                //startActivity(new Intent(getApplicationContext(), lectorqr.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 return true;
             } else if (itemId == R.id.bottom_miqr) {

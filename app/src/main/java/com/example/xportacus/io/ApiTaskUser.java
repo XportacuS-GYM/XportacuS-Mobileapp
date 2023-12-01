@@ -19,12 +19,13 @@ public class ApiTaskUser extends AsyncTask<String, Void, User> {
         this.txtStatus = txtStatus;
     }
     @Override
-    protected User doInBackground(String... emails) {
-        String email = emails[0];
+    protected User doInBackground(String... params) {
+        String email = params[0];
+        String token = params[1];
 
         // Realizar la solicitud a la API con Retrofit
         UserInfo apiService = UserInfoApiAdapter.getApiService();
-        Call<User> call = apiService.User(email);
+        Call<User> call = apiService.User("Bearer "+token, email);
 
         try {
             Response<User> response = call.execute();

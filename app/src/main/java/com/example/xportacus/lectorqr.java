@@ -27,6 +27,7 @@ public class lectorqr extends AppCompatActivity {
     TextView txtEmail;
     TextView txtNombre;
     TextView txtStatus;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,9 +71,12 @@ public class lectorqr extends AppCompatActivity {
 
         IntentResult result=IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
 
+        Bundle datos = getIntent().getExtras();
+        String token = datos.getString("token");
+
         String email=result.getContents();
 
-        new ApiTaskUser(txtEmail, txtNombre, txtStatus).execute(email);
+        new ApiTaskUser(txtEmail, txtNombre, txtStatus).execute(email,token);
     }
 
 }
