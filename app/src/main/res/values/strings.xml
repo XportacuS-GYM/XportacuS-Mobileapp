@@ -25,21 +25,21 @@
     </string-array>
     
     <string-array name="descrip_rutinas">
-        <item>Músculos implicados:</item>
-        <item>Músculos implicados:</item>
-        <item>Músculos implicados:</item>
-        <item>Músculos implicados:</item>
-        <item>Músculos implicados:</item>
-        <item>Músculos implicados:</item>
-        <item>Glúteo mayor, Isquiosurales y aductor mayor, Cuádriceps, Grupo espinal.</item> //hip trust
-        <item>hombros, trapecios, tríceps, bíceps y antebrazos.</item> //jalon
-        <item>Músculos implicados:</item>
-        <item>Pectoral superior, Pectoral inferior, Caja torácica.</item> //pec fly
-        <item>Músculos implicados:</item>
-        <item>Pectoral superior (pecho), tríceps, deltoides anterior.</item> //press banca inc
-        <item>Músculos implicados:</item>
-        <item>Músculos implicados:</item>
-        <item>Deltoides, tríceps branquial.</item> //press militar
-        <item>Músculos implicados:</item>
+        <item>Músculos implicados: Deltoides posterior, Romboides, Trapecio medio y inferior, Elevadores de la escápula, Redondo mayor.</item>
+        <item>Músculos implicados: Braquiorradial, Flexores del antebrazo.</item>
+        <item>Músculos implicados: Músculo braquial, flexor carpi radialis y palmar largo, flexor digitorum profundus, Músculo pronador redondo, Músculo pronador cuadrado.</item>
+        <item>Músculos implicados: Bíceps braquial, Braquial, Braquiorradial, Supinador largo del cúbito.</item>
+        <item>Músculos implicados: Deltoides, Trapecio, Músculos estabilizadores</item>
+        <item>Músculos implicados: Tríceps braquial, Deltoides posterior, Músculos estabilizadores del hombro y la espalda.</item>
+        <item>Músculos implicados: Glúteo mayor, Isquiosurales y aductor mayor, Cuádriceps, Grupo espinal.</item> //hip trust
+        <item>Músculos implicados: hombros, trapecios, tríceps, bíceps y antebrazos.</item> //jalon
+        <item>Músculos implicados: Bíceps braquial, Braquiorradial, Bracialis</item>
+        <item>Músculos implicados: Pectoral superior, Pectoral inferior, Caja torácica.</item> //pec fly
+        <item>Músculos implicados: Erectores Espinales, Trapecio, Romboides, Isquiotibiales, Glúteos, Cuádriceps, Fémures, Pantorrillas, Abdominales.</item>
+        <item>Músculos implicados: Pectoral superior (pecho), tríceps, deltoides anterior.</item> //press banca inc
+        <item>Músculos implicados: Pectorales, Deltoides anteriores, Tríceps braquial,Serrato anterior.</item>
+        <item>Músculos implicados: Tríceps Braquial, Cabeza Medial y Lateral del Tríceps, Deltoide.</item>
+        <item>Músculos implicados: Deltoides, tríceps branquial.</item> //press militar
+        <item>Músculos implicados: Dorsal Ancho, Trapecio, Romboides, Elevadores de la Escápula, Bíceps Braquial.</item>
     </string-array>
 </resources>
