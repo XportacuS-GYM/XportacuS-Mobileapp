@@ -27,7 +27,16 @@ public class VideoActivity extends AppCompatActivity {
         durVideo = findViewById(R.id.durVideo);
 
         handler = new Handler();
-        vv1.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.curl_biceps_barra_z));
+
+        String titulo = getIntent().getStringExtra("TITULO");
+        int video = getIntent().getIntExtra("VIDEO", 0);
+        TextView tituloV = findViewById(R.id.TituloVideo);
+
+        tituloV.setText(titulo);
+        vv1.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+video));
+
+        //String videoUrl = "https://youtube.com/shorts/3I7X5e-42pE?si=Fvzzwsy-sqzsSSty";
+        //vv1.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.curl_biceps_barra_z));
         vv1.start();
 
         // Inicializar el Runnable para actualizar la duración

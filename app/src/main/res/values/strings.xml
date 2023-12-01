@@ -1,4 +1,45 @@
 <resources>
     <string name="app_name">XportacuS</string>
     <string name="title_activity_register">RegisterActivity</string>
+
+    <string name="titulo_nombre">Titulo de Video</string>
+    <string name="titulo_desc">Músculos implicados:</string>
+    
+    <string-array name="titulos_de_video">
+        <item>Aperturas invertidas (Reverse fly)</item>
+        <item>Curl antebrazo agarre prono</item>
+        <item>Curl antebrazo agarre supino</item>
+        <item>Curl Biceps Barra Z</item>
+        <item>Elevaciones laterales en polea</item>
+        <item>Extensión de tríceps unilateral</item>
+        <item>Hip trust</item>
+        <item>Jalon al pecho agarre estrecho</item>
+        <item>Martillos Unilateral</item>
+        <item>Pec fly</item>
+        <item>Peso Muerto</item>
+        <item>Press banca inclinado</item>
+        <item>Press banca recto</item>
+        <item>Press Frances (Skull crushers) barra z</item>
+        <item>Press Militar</item>
+        <item>Remo sentado agarre cerrado</item>
+    </string-array>
+    
+    <string-array name="descrip_rutinas">
+        <item>Músculos implicados: Deltoides posterior, Romboides, Trapecio medio y inferior, Elevadores de la escápula, Redondo mayor.</item>
+        <item>Músculos implicados: Braquiorradial, Flexores del antebrazo.</item>
+        <item>Músculos implicados: Músculo braquial, flexor carpi radialis y palmar largo, flexor digitorum profundus, Músculo pronador redondo, Músculo pronador cuadrado.</item>
+        <item>Músculos implicados: Bíceps braquial, Braquial, Braquiorradial, Supinador largo del cúbito.</item>
+        <item>Músculos implicados: Deltoides, Trapecio, Músculos estabilizadores</item>
+        <item>Músculos implicados: Tríceps braquial, Deltoides posterior, Músculos estabilizadores del hombro y la espalda.</item>
+        <item>Músculos implicados: Glúteo mayor, Isquiosurales y aductor mayor, Cuádriceps, Grupo espinal.</item> //hip trust
+        <item>Músculos implicados: hombros, trapecios, tríceps, bíceps y antebrazos.</item> //jalon
+        <item>Músculos implicados: Bíceps braquial, Braquiorradial, Bracialis</item>
+        <item>Músculos implicados: Pectoral superior, Pectoral inferior, Caja torácica.</item> //pec fly
+        <item>Músculos implicados: Erectores Espinales, Trapecio, Romboides, Isquiotibiales, Glúteos, Cuádriceps, Fémures, Pantorrillas, Abdominales.</item>
+        <item>Músculos implicados: Pectoral superior (pecho), tríceps, deltoides anterior.</item> //press banca inc
+        <item>Músculos implicados: Pectorales, Deltoides anteriores, Tríceps braquial,Serrato anterior.</item>
+        <item>Músculos implicados: Tríceps Braquial, Cabeza Medial y Lateral del Tríceps, Deltoide.</item>
+        <item>Músculos implicados: Deltoides, tríceps branquial.</item> //press militar
+        <item>Músculos implicados: Dorsal Ancho, Trapecio, Romboides, Elevadores de la Escápula, Bíceps Braquial.</item>
+    </string-array>
 </resources>
