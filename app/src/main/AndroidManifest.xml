@@ -24,6 +24,8 @@
             android:name=".lectorqr"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation"
             />
         <activity
             android:name=".userqr"
