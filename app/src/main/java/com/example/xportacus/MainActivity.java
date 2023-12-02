@@ -50,8 +50,16 @@ public class MainActivity extends AppCompatActivity {
                             String token = response.body().getToken();
                             User user = response.body();
                             String email = user.getEmail();
+                            String name=user.getName();
+                            String direccion=user.getAddress();
+                            int edad=user.getAge();
+                            String statussub=user.getStatusSubscription();
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                             intent.putExtra("email", email);
+                            intent.putExtra("name",name);
+                            intent.putExtra("direccion",direccion);
+                            intent.putExtra("edad",edad);
+                            intent.putExtra("estatussub",statussub);
                             intent.putExtra("token",token);
                             startActivity(intent);
                         }

@@ -56,7 +56,7 @@ public class lectorqr extends AppCompatActivity {
                 finish();
                 return true;
             } else if (itemId == R.id.bottom_profile) {
-                startActivity(new Intent(getApplicationContext(), VideoActivity.class));
+                startActivity(new Intent(getApplicationContext(), UserProfile.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
                 return true;

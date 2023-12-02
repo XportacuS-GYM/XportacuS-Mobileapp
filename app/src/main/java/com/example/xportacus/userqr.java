@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.xportacus.io.User;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
@@ -75,7 +76,7 @@ public class userqr extends AppCompatActivity {
                 finish();
                 return true;
             } else if (itemId == R.id.bottom_profile) {
-                startActivity(new Intent(getApplicationContext(), VideoActivity.class));
+                startActivity(new Intent(getApplicationContext(), UserProfile.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
                 return true;

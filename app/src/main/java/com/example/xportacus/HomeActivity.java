@@ -30,6 +30,10 @@ public class HomeActivity extends AppCompatActivity implements RecyclerViewInter
 
         Bundle datos = getIntent().getExtras();
         String emailqr = "email@email.com"; //datos.getString("email");
+        String name=datos.getString("name");
+        String adress=datos.getString("direccion");
+        int age=datos.getInt("edad");
+        String sub=datos.getString("estatussub");
         String token = datos.getString("token");
 
         bottomNavigation.setOnItemSelectedListener(item -> {
@@ -50,7 +54,13 @@ public class HomeActivity extends AppCompatActivity implements RecyclerViewInter
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 return true;
             } else if (itemId == R.id.bottom_profile) {
-                startActivity(new Intent(getApplicationContext(), VideoActivity.class));
+                //startActivity(new Intent(getApplicationContext(), UserProfile.class));
+                Intent intent = new Intent(getApplicationContext(), UserProfile.class);
+                intent.putExtra("email", emailqr);
+                intent.putExtra("name",name);
+                intent.putExtra("direccion",adress);
+                intent.putExtra("edad",age);
+                intent.putExtra("estatussub",sub);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 return true;
             }

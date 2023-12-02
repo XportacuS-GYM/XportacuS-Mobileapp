@@ -21,12 +21,14 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".UserProfile"
+            android:exported="false" />
+        <activity
             android:name=".lectorqr"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:screenOrientation="portrait"
-            tools:replace="screenOrientation"
-            />
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:replace="screenOrientation" />
         <activity
             android:name=".userqr"
             android:exported="true"

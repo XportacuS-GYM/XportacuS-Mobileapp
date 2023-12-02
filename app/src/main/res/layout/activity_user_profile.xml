@@ -11,6 +11,30 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/lblEdad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            android:text="Edad"
+            android:textAlignment="center"
+            android:textColor="@color/secon"
+            android:textSize="34sp"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            tools:layout_editor_absoluteX="-16dp" />
+
+        <TextView
+            android:id="@+id/lbldireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="152dp"
+            android:text="Dirección"
+            android:textAlignment="center"
+            android:textColor="@color/secon"
+            android:textSize="34sp"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
             android:id="@+id/lblSuscripcion2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,15 +48,15 @@
 
         <TextView
             android:id="@+id/lblSuscripcion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_width="379dp"
+            android:layout_height="49dp"
             android:text="Estatus Suscripción"
             android:textAlignment="center"
             android:textColor="@color/secon"
             android:textSize="34sp"
-            app:layout_constraintTop_toBottomOf="@+id/txtEmail"
-            tools:layout_editor_absoluteX="0dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="651dp" />
 
         <TextView
             android:id="@+id/txtEstatusSub"
@@ -43,26 +67,15 @@
             android:textColor="@color/white"
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="@+id/imgPerfil"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="@+id/imgPerfil"
             app:layout_constraintTop_toBottomOf="@+id/lblSuscripcion" />
-
-        <ImageButton
-            android:id="@+id/btnBack"
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/search_rounded"
-            android:onClick="go_to_home"
-            android:src="@drawable/baseline_chevron_left_24"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imgPerfil"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="28dp"
             android:src="@drawable/profile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -85,15 +98,14 @@
             android:id="@+id/txtEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="email"
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lblSuscripcion2"
-            app:layout_constraintVertical_bias="0.128"
+            app:layout_constraintVertical_bias="0.062"
             tools:ignore="MissingConstraints"
             tools:visibility="invisible" />
 
@@ -113,15 +125,37 @@
             android:id="@+id/bottomNavigation"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/bottom_background"
             android:elevation="2dp"
             app:itemIconSize="30dp"
             app:itemIconTint="@drawable/item_selector"
             app:itemRippleColor="@android:color/transparent"
             app:labelVisibilityMode="unlabeled"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/bottom_menu"
-            tools:layout_editor_absoluteX="19dp"
-            tools:layout_editor_absoluteY="651dp" />
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/txtDireccionProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbldireccion" />
+
+        <TextView
+            android:id="@+id/txtEdadProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/lblSuscripcion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblEdad"
+            app:layout_constraintVertical_bias="0.361" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>
