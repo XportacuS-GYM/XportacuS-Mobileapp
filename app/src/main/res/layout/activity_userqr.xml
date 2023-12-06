@@ -26,7 +26,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Jose Luis"
             android:textColor="@color/white"
             android:textSize="23sp"
             app:layout_constraintEnd_toEndOf="@+id/imgPerfil"

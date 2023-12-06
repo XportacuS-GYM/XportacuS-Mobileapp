@@ -27,11 +27,14 @@ public class userqr extends AppCompatActivity {
 
 
         TextView txtDatos=findViewById(R.id.txtEmail);
+        TextView txtnombre=findViewById(R.id.txtName);
 
         Bundle intent=getIntent().getExtras();
 
         String emailqr=intent.getString("email");
+        String name=intent.getString("name");
 
+        txtnombre.setText(name);
         txtDatos.setText(emailqr);
 
         Button btnGuardar= findViewById(R.id.idBtnGenerateQR);

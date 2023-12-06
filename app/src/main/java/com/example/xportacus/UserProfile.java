@@ -16,7 +16,7 @@ public class UserProfile extends AppCompatActivity {
         setContentView(R.layout.activity_user_profile);
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
-        bottomNavigation.setSelectedItemId(R.id.bottom_home);
+        bottomNavigation.setSelectedItemId(R.id.bottom_profile);
 
         TextView txtName=findViewById(R.id.txtName);
         TextView txtemail=findViewById(R.id.txtEmail);
@@ -34,11 +34,14 @@ public class UserProfile extends AppCompatActivity {
         String sub=Intent.getString("estatussub");
         String token = Intent.getString("token");
 
+        String edad=String.valueOf(age);
+
         txtName.setText(name);
         txtemail.setText(emailqr);
         txtDireccion.setText(adress);
-        txtEdad.setText(age);
+        txtEdad.setText(edad);
         txtEstatus.setText(sub);
+
 
         bottomNavigation.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();

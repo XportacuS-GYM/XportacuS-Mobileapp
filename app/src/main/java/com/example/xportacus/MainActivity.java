@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         if (response.isSuccessful() && response.body() != null){
                             String token = response.body().getToken();
                             User user = response.body();
+                            System.out.println(user.getName());
                             String email = user.getEmail();
                             String name=user.getName();
                             String direccion=user.getAddress();
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go_to_register(View view)
     {
-        Intent register=new Intent(MainActivity.this, HomeActivity.class);
+        Intent register=new Intent(MainActivity.this, RegisterActivity.class);
         startActivity(register);
         finish();
     }
